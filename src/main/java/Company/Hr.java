@@ -1,3 +1,4 @@
+
 package Company;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -26,11 +27,11 @@ public class Hr {
     ObjectMapper mapper = new ObjectMapper();
 
     /**
-     * This method is main for hire, remove, display of an employee
-     * Using to switch cases we are having 7 different types of cases of an employee
-     * and two different employee type's also
+     * This method is main for hire, remove, display of an employee Using to switch cases we are
+     * having 7 different types of cases of an employee and two different employee type's also
      */
-    public void hrSolution() throws IOException, NullPointerException, InputMismatchException, IllegalArgumentException, ParseException {
+    public void hrSolution()
+            throws IOException, NullPointerException, InputMismatchException, IllegalArgumentException, ParseException {
         Scanner s = new Scanner(System.in);
         do {
             System.out.println("\n1. Add Employee");
@@ -44,9 +45,8 @@ public class Hr {
             value = s.nextInt();
             switch (value) {
                 /**
-                 * Here add an employee
-                 * Take the empId, firstName, lastName, hireDate, type, rate and experience from different scenarios
-                 * by the HR
+                 * Here add an employee Take the empId, firstName, lastName, hireDate, type, rate
+                 * and experience from different scenarios by the HR
                  */
                 case 1:
                     System.out.println("Enter Employee Id");
@@ -144,8 +144,7 @@ public class Hr {
     }
 
     /**
-     * Get the object of employee
-     * Add to my JsonUtil file
+     * Get the object of employee Add to my JsonUtil file
      */
     public void hire(Employee emp) throws IOException {
         jsonUtil = new JsonUtil();
@@ -153,12 +152,10 @@ public class Hr {
     }
 
     /**
-     * Remove an employee by empId
-     * get all the employee object or values inside employeeJsonObject
-     * search the object by giving removeEmpId
-     * get the object empId key --> value
-     * check if both match then remove my employee object having that empId value
-     * again store all my remaining objects or values
+     * Remove an employee by empId get all the employee object or values inside employeeJsonObject
+     * search the object by giving removeEmpId get the object empId key --> value check if both
+     * match then remove my employee object having that empId value again store all my remaining
+     * objects or values
      */
     public int employee_Remove(long removeEmpId) throws NullPointerException, IOException, ParseException {
         employeeJsonArray = jsonUtil.readJson_Values(filePath);
@@ -177,10 +174,8 @@ public class Hr {
     }
 
     /**
-     * Give an employee id
-     * get all the employee object or values inside employeeJsonObject
-     * search the object by giving displayEmpId
-     * search all the different values give to keys and print it
+     * Give an employee id get all the employee object or values inside employeeJsonObject search
+     * the object by giving displayEmpId search all the different values give to keys and print it
      * values like - empId, full name, type, hiring date
      */
     public String employeeDetails_Display(int displayEmpId) throws NullPointerException, IOException, ParseException {
@@ -205,10 +200,8 @@ public class Hr {
     }
 
     /**
-     * Give an employee id
-     * get all the employee object or values inside employeeObject
-     * search the object by giving displayEmpId
-     * search all the different values give to keys and print it
+     * Give an employee id get all the employee object or values inside employeeObject search the
+     * object by giving displayEmpId search all the different values give to keys and print it
      * values like - empId, full name, type, pay
      */
     public long employeePayOf_Display(int displayEmpId) throws NullPointerException, IOException, ParseException {
@@ -233,12 +226,10 @@ public class Hr {
     }
 
     /**
-     * get all the employee object or values inside employeeObject
-     * Convert employeeObject to map
-     * iterate the hourlyObject by map.entry and get empId value all of them
-     * give this empId to searchEmpObject
-     * check if type is equal to hourly employee then get all the required values to give key
-     * and print it
+     * get all the employee object or values inside employeeObject Convert employeeObject to map
+     * iterate the hourlyObject by map.entry and get empId value all of them give this empId to
+     * searchEmpObject check if type is equal to hourly employee then get all the required values to
+     * give key and print it
      */
     public int hourlyEmployee_Display() throws IOException, ParseException {
         int count = 0;
@@ -265,12 +256,10 @@ public class Hr {
     }
 
     /**
-     * get all the employee object or values inside employeeObject
-     * Convert employeeObject to map
-     * iterate the salariedObject by map.entry and get empId value all of them
-     * give this empId to searchEmpObject
-     * check if type is equal to salaried employee then get all the required values to give key
-     * and print it
+     * get all the employee object or values inside employeeObject Convert employeeObject to map
+     * iterate the salariedObject by map.entry and get empId value all of them give this empId to
+     * searchEmpObject check if type is equal to salaried employee then get all the required values
+     * to give key and print it
      */
     public int salariedEmployee_Display() throws IOException, ParseException {
         int count = 0;
@@ -297,11 +286,9 @@ public class Hr {
     }
 
     /**
-     * Display all my employee values or json values
-     * get all the employee object or values inside employeeObject
-     * Convert employeeObject to map and iterate the map
-     * get all the Id key inside searchObject
-     * get all the required values and print it
+     * Display all my employee values or json values get all the employee object or values inside
+     * employeeObject Convert employeeObject to map and iterate the map get all the Id key inside
+     * searchObject get all the required values and print it
      */
     public int allEmployees_Display() throws IOException, ParseException {
         employeeJsonArray = jsonUtil.readJson_Values(filePath);

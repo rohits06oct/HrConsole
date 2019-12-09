@@ -1,3 +1,4 @@
+
 package Company;
 
 import java.util.Date;
@@ -9,13 +10,15 @@ public class SalariedEmployee extends Employee {
     final private int defaultSalary = 300000;
     final private int defaultExperience = 0;
 
-    public SalariedEmployee(int empId, String firstName, String lastName, Date hireDate, int experience, EmployeeType type) throws NullPointerException, InputMismatchException, IllegalArgumentException {
+    public SalariedEmployee(int empId, String firstName, String lastName, Date hireDate, int experience, EmployeeType type)
+            throws NullPointerException, InputMismatchException, IllegalArgumentException {
         super(empId, firstName, lastName, hireDate, type);
         this.experience = experience;
         setPay();
     }
 
-    public SalariedEmployee(int empId, String firstName, String lastName, Date hireDate, EmployeeType type)throws IllegalArgumentException {
+    public SalariedEmployee(int empId, String firstName, String lastName, Date hireDate, EmployeeType type)
+            throws IllegalArgumentException {
         super(empId, firstName, lastName, hireDate, type);
         this.salary = defaultSalary;
         this.experience = defaultExperience;
@@ -23,9 +26,8 @@ public class SalariedEmployee extends Employee {
     }
 
     /**
-     * Abstract method extends from employee
-     * Get the salary of the employee per month
-     * and also check experience should be less then 30
+     * Abstract method extends from employee Get the salary of the employee per month and also check
+     * experience should be less then 30
      */
     public void setPay() throws IllegalArgumentException {
         if (experience <= 30) {

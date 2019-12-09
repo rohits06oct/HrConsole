@@ -1,3 +1,4 @@
+
 package Company;
 
 import java.util.Date;
@@ -9,13 +10,15 @@ public class HourlyEmployee extends Employee {
     final private int defaultHour = 110;
     final private int defaultRate = 100;
 
-    public HourlyEmployee(int empId, String firstName, String lastName, Date hireDate, int rate, EmployeeType type) throws NullPointerException, InputMismatchException, IllegalArgumentException {
+    public HourlyEmployee(int empId, String firstName, String lastName, Date hireDate, int rate, EmployeeType type)
+            throws NullPointerException, InputMismatchException, IllegalArgumentException {
         super(empId, firstName, lastName, hireDate, type);
         this.rate = rate;
         setPay();
     }
 
-    public HourlyEmployee(int empId, String firstName, String lastName, Date hireDate, EmployeeType type) throws IllegalArgumentException {
+    public HourlyEmployee(int empId, String firstName, String lastName, Date hireDate, EmployeeType type)
+            throws IllegalArgumentException {
         super(empId, firstName, lastName, hireDate, type);
         this.hour = defaultHour;
         this.rate = defaultRate;
@@ -23,9 +26,8 @@ public class HourlyEmployee extends Employee {
     }
 
     /**
-     * Abstract method extends from employee
-     * Get the salary of the employee per month
-     * and also check rate should not zero and greater than 2000
+     * Abstract method extends from employee Get the salary of the employee per month and also check
+     * rate should not zero and greater than 2000
      */
     public void setPay() throws IllegalArgumentException {
         if (rate != 0 && rate <= 2000) {

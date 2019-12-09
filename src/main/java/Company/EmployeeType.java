@@ -1,6 +1,6 @@
+
 package Company;
 
 public enum EmployeeType {
-    Hourly,
-    Salaried;
+    Hourly, Salaried;
 }
