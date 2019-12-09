@@ -1,3 +1,4 @@
+
 package Company;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -14,7 +15,8 @@ abstract public class Employee {
     private Date hireDate;
     private EmployeeType type;
 
-    public Employee(int empId, String firstName, String lastName, Date hireDate, EmployeeType type) throws NullPointerException, InputMismatchException, IllegalArgumentException {
+    public Employee(int empId, String firstName, String lastName, Date hireDate, EmployeeType type)
+            throws NullPointerException, InputMismatchException, IllegalArgumentException {
         this.empId = empId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -28,7 +30,7 @@ abstract public class Employee {
      */
     public abstract void setPay() throws IllegalArgumentException;
 
-    public void checkEmpId() throws IllegalArgumentException{
+    public void checkEmpId() throws IllegalArgumentException {
         if (empId == 0) {
             throw new IllegalArgumentException("EmpId is invalid");
         }
